@@ -5,13 +5,16 @@
     self.errors = ko.observableArray();
 
     function updateValues() {
-        self.errors.push({ message: "asdasd" });
+        $.getJSON("/api/notifications", function (data) {
+            for(var message in data)
+            {
+                self.errors.push({ message: message });
+            }
+        });
     }
 
     Sammy(function () {
         setInterval(updateValues, 5000);
-
-        self.warnings.push({ message: "asdasd" });
     });
 
     return self;
