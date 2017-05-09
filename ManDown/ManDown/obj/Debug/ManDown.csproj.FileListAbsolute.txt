@@ -72,6 +72,5 @@ C:\GIT\mandown\ManDown\ManDown\bin\System.Web.Razor.xml
 C:\GIT\mandown\ManDown\ManDown\bin\System.Web.WebPages.xml
 C:\GIT\mandown\ManDown\ManDown\bin\System.Web.WebPages.Deployment.xml
 C:\GIT\mandown\ManDown\ManDown\bin\System.Web.WebPages.Razor.xml
-C:\GIT\mandown\ManDown\ManDown\obj\Debug\ManDown.csprojResolveAssemblyReference.cache
 C:\GIT\mandown\ManDown\ManDown\obj\Debug\ManDown.dll
 C:\GIT\mandown\ManDown\ManDown\obj\Debug\ManDown.pdb

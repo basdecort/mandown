@@ -1,23 +1,17 @@
 ﻿function HomeViewModel(app, dataModel) {
     var self = this;
 
-    self.myHometown = ko.observable("");
+    self.warnings = ko.observableArray();
+    self.errors = ko.observableArray();
+
+    function updateValues() {
+        self.errors.push({ message: "asdasd" });
+    }
 
     Sammy(function () {
-        this.get('#home', function () {
-            // Make a call to the protected Web API by passing in a Bearer Authorization Header
-            $.ajax({
-                method: 'get',
-                url: app.dataModel.userInfoUrl,
-                contentType: "application/json; charset=utf-8",
-                headers: {
-                },
-                success: function (data) {
-                    self.myHometown('Your Hometown is : ' + data.hometown);
-                }
-            });
-        });
-        this.get('/', function () { this.app.runRoute('get', '#home') });
+        setInterval(updateValues, 5000);
+
+        self.warnings.push({ message: "asdasd" });
     });
 
     return self;
