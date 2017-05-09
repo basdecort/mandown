@@ -6,9 +6,9 @@
 
     function updateValues() {
         $.getJSON("/api/notifications", function (data) {
-            for(var message in data)
-            {
-                self.errors.push({ message: message });
+
+            for (var i = 0, len = data.length; i < len; i++) {
+                self.errors.push({ message: data[i] });
             }
         });
     }
